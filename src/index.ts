@@ -1,13 +1,3 @@
-/**
- * Wikipedia MCP — wraps Wikipedia REST API (free, no auth)
- *
- * Tools:
- * - search_wikipedia: search articles by keyword
- * - get_article_summary: get summary for a specific article
- * - get_article_sections: get section structure of an article
- * - get_random_articles: get random Wikipedia articles
- */
-
 interface McpToolDefinition {
   name: string;
   description: string;
@@ -22,6 +12,17 @@ interface McpToolExport {
   tools: McpToolDefinition[];
   callTool: (name: string, args: Record<string, unknown>) => Promise<unknown>;
 }
+
+/**
+ * Wikipedia MCP — wraps Wikipedia REST API (free, no auth)
+ *
+ * Tools:
+ * - search_wikipedia: search articles by keyword
+ * - get_article_summary: get summary for a specific article
+ * - get_article_sections: get section structure of an article
+ * - get_random_articles: get random Wikipedia articles
+ */
+
 
 const WIKI_API = 'https://en.wikipedia.org/w/api.php';
 const WIKI_REST = 'https://en.wikipedia.org/api/rest_v1';

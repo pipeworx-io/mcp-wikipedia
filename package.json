@@ -1,11 +1,11 @@
 {
   "name": "@pipeworx/mcp-wikipedia",
   "version": "0.1.0",
-  "description": "MCP server for Wikipedia — search, summaries, sections, and random articles",
+  "description": "Wikipedia MCP — wraps Wikipedia REST API (free, no auth)",
   "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
-  "keywords": ["mcp", "mcp-server", "model-context-protocol", "wikipedia", "encyclopedia", "pipeworx"],
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "wikipedia"],
   "license": "MIT",
   "repository": {
     "type": "git",
