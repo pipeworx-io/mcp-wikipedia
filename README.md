@@ -1,36 +1,54 @@
 # mcp-wikipedia
 
-MCP server for Wikipedia. Search articles, get summaries, browse section structure, and discover random articles — free, no API key required.
+Wikipedia MCP — wraps Wikipedia REST API (free, no auth)
 
-Part of the [Pipeworx](https://pipeworx.io) open MCP gateway.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 250+ live data sources.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `search_wikipedia` | Search Wikipedia articles by keyword |
-| `get_article_summary` | Get article summary with description and thumbnail |
-| `get_article_sections` | Get the section structure (table of contents) of an article |
-| `get_random_articles` | Get random Wikipedia articles |
 
 ## Quick Start
+
+Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 
 ```json
 {
   "mcpServers": {
     "wikipedia": {
-      "command": "npx",
-      "args": ["-y", "mcp-remote@latest", "https://gateway.pipeworx.io/wikipedia/mcp"]
+      "url": "https://gateway.pipeworx.io/wikipedia/mcp"
     }
   }
 }
 ```
 
-Or use the CLI:
+Or connect to the full Pipeworx gateway for access to all 250+ data sources:
 
-```bash
-npx pipeworx use wikipedia
+```json
+{
+  "mcpServers": {
+    "pipeworx": {
+      "url": "https://gateway.pipeworx.io/mcp"
+    }
+  }
+}
 ```
+
+## Using with ask_pipeworx
+
+Instead of calling tools directly, you can ask questions in plain English:
+
+```
+ask_pipeworx({ question: "your question about Wikipedia data" })
+```
+
+The gateway picks the right tool and fills the arguments automatically.
+
+## More
+
+- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [pipeworx.io](https://pipeworx.io)
 
 ## License
 
