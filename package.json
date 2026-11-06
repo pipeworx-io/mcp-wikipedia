@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-wikipedia",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Wikipedia MCP — wraps Wikipedia REST API (free, no auth)",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "wikipedia",
     "gatewaySlug": "wikipedia",
-    "sourceHash": "v1-9a2756e52c07ba3da3f72cfe4d7d01cfa9cb37527f2fcc49860aa457ac8b3a4c",
-    "sourceCommit": "98853f34516646cb7c4c1460f09249b262c0269e"
+    "sourceHash": "v1-9bd7cfbfe591f10ec0eb25c6f73f4c3b61b8c54d102141f01a28d7b16c37bea4",
+    "sourceCommit": "78b905fa3a6880dfb85c79150f4bffe8cf50ef00"
   }
 }
